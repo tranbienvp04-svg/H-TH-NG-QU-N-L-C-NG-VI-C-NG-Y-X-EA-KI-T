@@ -1,0 +1,16 @@
+name: dang_uy_mobile
+version: 1.0.0
+description: Flutter client for the work management system.
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
