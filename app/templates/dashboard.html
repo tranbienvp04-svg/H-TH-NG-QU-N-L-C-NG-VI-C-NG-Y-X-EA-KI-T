@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% block content %}
+<div class="grid cols-4">
+  <div class="card"><div class="muted">Tổng người dùng</div><div class="stat">{{stats.users}}</div></div>
+  <div class="card"><div class="muted">Tổng nhiệm vụ</div><div class="stat">{{stats.tasks}}</div></div>
+  <div class="card"><div class="muted">Việc của tôi</div><div class="stat">{{stats.mine}}</div></div>
+  <div class="card"><div class="muted">Xin chào</div><div class="stat" style="font-size:22px">{{me.full_name}}</div><div class="small">{{me.role}}</div></div>
+</div>
+<div class="grid cols-2" style="margin-top:16px">
+  <div class="box"><h3>📢 Thông báo nội bộ</h3>{% for n in notices %}<div style="padding:10px 0;border-bottom:1px dashed #e5e7eb"><b>{{n.title}}</b><div class="small">{{n.content}}</div></div>{% endfor %}</div>
+  <div class="box"><h3>🕘 Nhật ký gần đây</h3>{% for l in logs %}<div style="padding:10px 0;border-bottom:1px dashed #e5e7eb">{{l.text}} <span class="muted small">({{l.time}})</span></div>{% endfor %}</div>
+</div>
+<div class="box" style="margin-top:16px"><h3>📋 Nhiệm vụ mới nhất</h3>
+<table><tr><th>Tiêu đề</th><th>Người nhận</th><th>Hạn</th><th>Tiến độ</th><th>Trạng thái</th></tr>
+{% for a in tasks %}<tr><td>{{a.title}}</td><td>{{a.assignee_username}}</td><td>{{a.due_date}}</td><td>{{a.progress}}</td><td><span class="badge">{{a.status}}</span></td></tr>{% endfor %}
+</table></div>
+{% endblock %}

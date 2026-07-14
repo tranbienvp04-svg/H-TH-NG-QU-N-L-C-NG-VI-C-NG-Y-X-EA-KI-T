@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block content %}
+<div class="grid cols-2">
+<div class="box"><h3>🙍 Hồ sơ người dùng</h3><p><b>Họ tên:</b> {{me.full_name}}</p><p><b>Tài khoản:</b> {{me.username}}</p><p><b>Vai trò:</b> {{me.role}}</p><p><b>Số điện thoại:</b> {{me.phone}}</p><p><b>Email:</b> {{me.email}}</p></div>
+<div class="box"><h3>🔑 Đổi mật khẩu</h3><form method="post" action="/profile/change-password"><label>Mật khẩu cũ</label><input type="password" name="old_password" required><label>Mật khẩu mới</label><input type="password" name="new_password" required><label>Xác nhận mật khẩu mới</label><input type="password" name="confirm_password" required><button type="submit">Đổi mật khẩu</button></form>{% if msg %}<p><b>{{msg}}</b></p>{% endif %}</div>
+</div>
+{% endblock %}

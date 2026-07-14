@@ -1,0 +1,3 @@
+{% extends "base.html" %}{% block content %}
+<div class="box"><h3>🛡️ Vai trò & phân quyền</h3><table><tr><th>#</th><th>Vai trò</th><th>Mô tả</th><th>Quyền chính</th></tr>{% for r in roles %}<tr><td>{{loop.index}}</td><td>{{r.name}}</td><td>{{r.desc}}</td><td>{{r.perm}}</td></tr>{% endfor %}</table></div>
+{% endblock %}

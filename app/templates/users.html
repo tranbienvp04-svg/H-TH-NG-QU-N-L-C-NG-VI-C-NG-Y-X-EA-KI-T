@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block content %}
+<div class="grid cols-2">
+<div class="box"><h3>👥 Danh sách người dùng</h3><table><tr><th>#</th><th>Họ tên</th><th>Tài khoản</th><th>SĐT</th><th>Vai trò</th><th>TT</th></tr>{% for u in users %}<tr><td>{{loop.index}}</td><td>{{u.full_name}}</td><td>{{u.username}}</td><td>{{u.phone}}</td><td>{{u.role}}</td><td>{{u.status}}</td></tr>{% endfor %}</table></div>
+<div class="box"><h3>➕ Thêm người dùng mới</h3><form method="post" action="/users/create"><label>Họ và tên</label><input name="full_name" required><label>Tài khoản</label><input name="username" required><label>Mật khẩu mặc định</label><input name="password" value="123456"><label>Số điện thoại</label><input name="phone" required><label>Vai trò</label><select name="role">{% for r in roles %}<option value="{{r.name}}">{{r.name}}</option>{% endfor %}</select><label>Email</label><input name="email"><label>Trạng thái</label><select name="status"><option>Hoạt động</option><option>Tạm khóa</option></select><button type="submit">Lưu người dùng</button></form></div>
+</div>{% endblock %}

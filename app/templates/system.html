@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block content %}
+<div class="grid cols-2">
+<div class="box"><h3>⚙️ Quản trị hệ thống</h3><ul><li>Quản lý người dùng và vai trò</li><li>Nhật ký thao tác</li><li>OTP quên mật khẩu</li><li>Giao việc trực tiếp / bằng file</li><li>Đổi mật khẩu cá nhân</li></ul></div>
+<div class="box"><h3>🧾 Nhật ký hệ thống</h3>{% for l in logs %}<div style="padding:10px 0;border-bottom:1px dashed #e5e7eb">{{l.text}} <span class="muted small">({{l.time}})</span></div>{% endfor %}</div>
+</div>
+{% endblock %}

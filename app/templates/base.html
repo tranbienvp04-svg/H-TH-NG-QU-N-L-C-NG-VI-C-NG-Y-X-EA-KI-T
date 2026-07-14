@@ -1,0 +1,23 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><title>V12.5</title>
+<style>
+:root{--c1:#a40d19;--c2:#0b2f63;--bg:#f4f6fb;--card:#fff;--bd:#e3e8f2;--text:#1f2937}
+*{box-sizing:border-box} body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.top{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;padding:18px 24px;box-shadow:0 8px 20px rgba(0,0,0,.12)}
+.top h1{margin:0;font-size:28px}.sub{opacity:.95;margin-top:6px}
+.menu{display:flex;gap:10px;flex-wrap:wrap;padding:12px 24px;background:#fff;border-bottom:1px solid var(--bd);position:sticky;top:0}
+.menu a{padding:10px 14px;border-radius:10px;text-decoration:none;color:#243b53;font-weight:600}
+.menu a:hover{background:#eef4ff}
+.wrap{padding:22px;max-width:1400px;margin:auto}
+.grid{display:grid;gap:16px}.cols-2{grid-template-columns:1fr 1fr}.cols-3{grid-template-columns:1fr 1fr 1fr}.cols-4{grid-template-columns:repeat(4,1fr)}
+.card,.box{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px;box-shadow:0 8px 20px rgba(16,24,40,.04)}
+.stat{font-size:32px;font-weight:800}.muted{color:#667085}
+table{width:100%;border-collapse:collapse} th,td{padding:10px;border-bottom:1px solid #edf1f7;text-align:left;vertical-align:top} th{background:#f8fafc}
+input,textarea,select{width:100%;padding:10px;border:1px solid #cfd8e6;border-radius:10px;margin-top:6px;margin-bottom:10px}
+button,.btn{background:linear-gradient(135deg,var(--c1),#c81e1e);color:#fff;border:none;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
+.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:#eef2ff;color:#374151;font-size:12px}
+.small{font-size:13px}
+</style></head><body>
+<div class="top"><h1>V12.5 – QUẢN LÝ GIAO NHIỆM VỤ & ĐÁNH GIÁ THỰC HIỆN</h1><div class="sub">Đảng ủy xã Ea Kiết · giao diện hoàn chỉnh, đẹp, dễ triển khai nội bộ</div></div>
+<div class="menu">
+<a href="/">🏠 Tổng quan</a><a href="/assign">📌 Giao việc</a><a href="/users">👥 Người dùng</a><a href="/roles">🛡️ Vai trò</a><a href="/system">⚙️ Hệ thống</a><a href="/profile">🙍 Hồ sơ</a><a href="/forgot-password">🔐 Quên mật khẩu</a><a href="/logout">↩️ Đăng xuất</a>
+</div><div class="wrap">{% block content %}{% endblock %}</div></body></html>
